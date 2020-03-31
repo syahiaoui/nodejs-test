@@ -19,6 +19,16 @@
         count:  -c=[true|false] --counter=[true|false]
         Example: --counter or -c
   ```
+  * You can passe input data as environnement variable:
+  ```bash
+  export INPUT_DATA=absolutePathToTheDataFile
+  //or
+  set INPUT_DATA=absolutePathToTheDataFile
+  //or whene starting the application
+  INPUT_DATA=absolutePathToTheDataFile node app.js --filter=nakes
+  ```
+  Example: `INPUT_DATA=/home/developer/work/data.js node app.js --filter=nakes`
+
 ## Example
 Filter data using this pattern `nakes` and count children:
 `node app.js -f=nakes -c`

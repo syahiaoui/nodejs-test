@@ -1,5 +1,4 @@
 'use strict';
-//const { data } = require('./data');
 const { isEmpty } = require('./src/utils/isEmpty');
 const { mainHelp, usage } = require('./src/commands/help')
 const { argsOptions } = require('./src/commands/argvParser');
