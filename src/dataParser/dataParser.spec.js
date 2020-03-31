@@ -98,23 +98,3 @@ describe('dataParser', () => {
         });
     });
 });
-
-
-describe('sssssssssssss', () => {
-    test('greetWorld calls the greeting function properly', () => {
-        const greetImplementation = name => `Hey, ${name}!`;
-        const mockFn = jest.fn(greetImplementation);
-        const value = greetWorld(mockFn);
-        expect(mockFn).toHaveBeenCalled();
-        expect(mockFn).toHaveBeenCalledWith('world');
-        expect(value).toBe('Hey, world!');
-        // const greetImplementation = (accumulator, currentValue, nodeToUpdate, filteredArray, count) => peoples;
-        // const mockFn = jest.fn(greetImplementation);
-        // console.log(JSON.stringify(greetImplementation))
-        // const value = filteredPepoles(greetImplementation)
-    });
-});
-
-function greetWorld(greettingFn) {
-    return greettingFn('world');
-}
