@@ -72,8 +72,20 @@ describe('argsOptions', () => {
         expect(Object.keys(options)).toHaveLength(0);
         expect(options).toEqual({});
     });
-    test('should have an empty options if filter not have value', () => {
+    test('should have an empty options if filter not have value (long args)', () => {
         let argv = ['--filter']
+        const options = argsOptions(argv);
+        expect(Object.keys(options)).toHaveLength(0);
+        expect(options).toEqual({});
+    });
+    test('should have an empty options if filter not have value (short args)', () => {
+        let argv = ['-f']
+        const options = argsOptions(argv);
+        expect(Object.keys(options)).toHaveLength(0);
+        expect(options).toEqual({});
+    });
+    test('should ignore unknown short args)', () => {
+        let argv = ['-t']
         const options = argsOptions(argv);
         expect(Object.keys(options)).toHaveLength(0);
         expect(options).toEqual({});
