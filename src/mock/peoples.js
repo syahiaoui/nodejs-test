@@ -45,19 +45,6 @@ exports.expectedResult = [{
     }
 ];
 
-exports.removedAnimals = {
-    name: 'Lillian Calamandrei',
-    animals: [{ name: 'Rats' },
-        { name: 'Macaw' },
-        { name: 'Gazelle' },
-        { name: 'Gazelle' },
-        { name: 'Alpaca' },
-        { name: 'Snakes' },
-        { name: 'Yellowjacket' },
-        { name: 'Stickleback' }
-    ]
-};
-
 exports.accumulatoWithNoOptions = [
     { "name": "Harold Patton", "animals": [{ "name": "Frogmouth" }] },
     {
