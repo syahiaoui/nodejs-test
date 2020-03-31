@@ -7,7 +7,7 @@
     "description": "javascript test",
     "main": "app.js",
     "scripts": {
-        "test": "jest  --config  ./jest.config.js",
+        "test": "INPUT_DATA=./src/mock/inputData.js jest  --config  ./jest.config.js",
         "coverage": "jest  --config  ./jest.config.js --coverage"
     },
     "author": "syahiaoui",

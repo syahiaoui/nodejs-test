@@ -1,10 +1,11 @@
 'use strict';
+const { isEmpty } = require('../utils/isEmpty');
 
 /**
  * @enum keysMap
  * @readonly
  */
-let keysMap = {
+const keysMap = {
     c: "count",
     f: "filter",
     i: "ignoreCase"
@@ -19,13 +20,16 @@ let keysMap = {
 exports.longAndShortArgsParser = arg => {
     let [key, value] = arg.split('=');
     if (arg.startsWith('--')) {
+        if (key.slice(2) === "filter" && isEmpty(value)) return {};
         return {
             [key.slice(2)]: value || true
         }
     } else if (arg[0] === '-') {
         key = key.slice(1)
+        if (key === "f" && isEmpty(value)) return {};
+
         return {
-            [keysMap[key] || key.slice(1)]: value || true
+            [keysMap[key] || key]: value || true
         }
     }
 };
