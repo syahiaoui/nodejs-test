@@ -1,0 +1,18 @@
+{
+    "name": "javascript",
+    "version": "1.0.0",
+    "engines": {
+        "node": ">=12.0.0"
+    },
+    "description": "javascript test",
+    "main": "app.js",
+    "scripts": {
+        "test": "jest  --config  ./jest.config.js",
+        "coverage": "jest  --config  ./jest.config.js --coverage"
+    },
+    "author": "syahiaoui",
+    "license": "ISC",
+    "devDependencies": {
+        "jest": "25.2.3"
+    }
+}
