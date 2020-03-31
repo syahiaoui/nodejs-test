@@ -1,7 +1,7 @@
 const { isEmpty } = require('./isEmpty');
 
 describe('isEmpty', () => {
-    it('should check that value is empty', () => {
+    test('should check that value is empty', () => {
         expect(isEmpty(undefined)).toBeTruthy()
         expect(isEmpty(null)).toBeTruthy()
         expect(isEmpty()).toBeTruthy()
@@ -10,7 +10,7 @@ describe('isEmpty', () => {
         expect(isEmpty({})).toBeTruthy()
         expect(isEmpty([])).toBeTruthy()
     });
-    it('should check that value is not empty', () => {
+    test('should check that value is not empty', () => {
         expect(isEmpty(0)).toBeFalsy()
         expect(isEmpty('hey')).toBeFalsy()
         expect(isEmpty({ filter: 'ro' })).toBeFalsy()
